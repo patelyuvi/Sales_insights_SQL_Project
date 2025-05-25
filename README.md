@@ -35,7 +35,8 @@ The schema consists of five core tables:
 
 The ERD visually represents the relationships among entities in the database.
 
-![ERD](./images/erd_sales_project.png)
+![ERD Diagram](./ERD%20image.png)
+
 
 ---
 
