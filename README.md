@@ -1,103 +1,71 @@
-# Sales Insights SQL Project
+# 📊 Sales Insights SQL Project
 
-This project is designed to showcase SQL skills for a Data Analyst role using a realistic business scenario. It includes data modeling, schema design, data population, and exploratory SQL queries on sales transactions.
-
-## 🧾 Project Overview
-
-A retail company wants to analyze their sales data for decision-making. The project involves multiple tables representing customers, products, salespersons, sales transactions, and sales history.
-
-## 🗂️ Database Schema
-
-- **CUSTOMER**: Information about customers (ID, name, address, region).
-- **PRODUCT**: List of products with category, price, size, and weight.
-- **SALESPERSON**: Sales team data including role and region.
-- **SALES**: Transactional sales records.
-- **SALES_HISTORY**: Archival or previous sales records.
-
-## ⚙️ Technologies Used
-
-- SQL (MySQL)
-- Entity-Relationship (ER) modelling
-- Data manipulation and query writing
-
-
-# 📊 SQL Sales Analytics Project
-
-This project is a comprehensive SQL-based analysis of a fictional company's sales data. It is designed to showcase real-world **data analysis**, **business intelligence**, and **advanced SQL skills** including joins, aggregations, window functions, views, and stored procedures.
+This project presents a hands-on SQL data analysis case study based on a fictional retail company’s sales data. It demonstrates my ability to model business processes into a normalized database structure, write optimized SQL queries, and extract actionable insights that can help guide decision-making.
 
 ---
 
-## 🔧 Tools & Technologies
+## 🧾 Overview
 
-- SQL (MySQL compatible)
-- ERD design tools (drawSQL.io / dbdiagram.io)
-- GitHub for version control
-- Optional: Tableau / Power BI (for dashboard layer)
+A mid-sized retail company is looking to improve sales performance and customer retention. To support this, I designed a relational database schema to capture relevant business data (customers, products, transactions, and employees), populated it with realistic sample data, and answered key business questions using SQL.
 
----
-
-## 🧠 Objective
-
-To simulate a business scenario involving **customers**, **products**, **salespeople**, and **transactions**, and solve real business questions using SQL to extract insights.
+This project highlights a data analyst’s role in **translating raw data into strategic insights**.
 
 ---
 
-## 📁 Database Schema
+## 🗂️ Database Design
 
-- **CUSTOMER**
-- **PRODUCT**
-- **SALES**
-- **SALES_HISTORY**
-- **SALESPERSON**
+The schema consists of five core tables:
 
-See the ERD below 👇
+- **CUSTOMER**: Stores customer details including name, location, and region.
+- **PRODUCT**: Catalog of products with attributes such as category, price, and weight.
+- **SALESPERSON**: Sales team roster with role, territory, and joining information.
+- **SALES**: Primary transactional table capturing individual orders.
+- **SALES_HISTORY**: Snapshot of historical orders (backup/archive).
+
+---
+
+## 🧰 Tools & Technologies
+
+- **SQL** (MySQL)
+- **Version Control**: Git & GitHub
 
 ---
 
 ## 📈 Entity Relationship Diagram (ERD)
 
+The ERD visually represents the relationships among entities in the database.
+
 ![ERD](./images/erd_sales_project.png)
 
 ---
 
-## 🔍 Business Questions Solved
+## 💼 Business Questions Answered
 
-| Question                                   | SQL Feature           | Outcome |
-|---------                                   |-------------          |---------|
-| Which region generates the most revenue?   | GROUP BY, JOIN        | SOUTH region performs best |
-| Top 5 products by revenue?                 | ORDER BY + LIMIT      | Focus on iPhone, HTC, etc. |
-| Monthly revenue trend?                     | DATE_FORMAT, GROUP BY | Peak in February |
-| Top salespeople?                           | JOIN + SUM            | BOB MORIS leads |
-| High-value customers?                      | COUNT + SUM           | Targeted loyalty |
-| Category-wise revenue?                     | GROUP BY + JOIN       | Mobiles lead |
-| Average Order Value?                       | AVG()                 | Used for upsell targeting |
-| Repeat customers?                          | Subquery + HAVING     | 30% customer retention |
-| Product bundling?                          | Self JOIN             | iPhone & cover bundled |
-| Product pair combos?                       | COUNT + GROUP         | Target cross-sells |
+Below are key business questions answered using SQL, along with the features used and the insights derived:
 
----
-
-## 🔑 Key SQL Features Used
-
-- ✅ JOINs and aggregations
-- ✅ Window functions (`RANK`)
-- ✅ CTEs (Common Table Expressions)
-- ✅ Views for reusable logic
-- ✅ Stored procedures for automation
+| 💡 Business Question                         | 🔍 SQL Techniques Used      | 📊 Insight |
+|---------------------------------------------|-----------------------------|------------|
+| Which region is contributing the most revenue? | `JOIN`, `GROUP BY`, `SUM()` | Southern region leads in total sales |
+| What are the top 5 products by revenue?     | `ORDER BY`, `LIMIT`         | iPhone, HTC 7800, Samsung F7100 are top performers |
+| How are monthly revenues trending?          | `DATE_FORMAT`, `GROUP BY`   | Sales peak observed in February |
+| Who are the top-performing salespeople?     | `JOIN`, `GROUP BY`, `SUM()` | Bob Moris and Peter Mann lead |
+| Which customers generate the highest revenue? | `GROUP BY`, `SUM()`         | Key customers identified for loyalty program |
+| Which product categories are driving sales? | `JOIN`, `GROUP BY`          | Mobile category contributes the most |
+| What is the average order value?            | `AVG()`                     | Useful for upselling and pricing strategy |
+| How many repeat customers do we have?       | Subqueries, `HAVING COUNT > 1` | 30% of customers made multiple purchases |
+| Are any products frequently bought together? | Self `JOIN`, `GROUP BY`     | Product bundling opportunities identified |
+| Can we identify successful product pairings? | Aggregation + filtering     | iPhone & Mobile Cover most common combo |
 
 ---
 
-## 📂 Project Structure
+## 🧠 Advanced SQL Techniques Demonstrated
 
-sales-analytics-sql/
-├── data/
-│   ├── create\_tables.sql
-│   ├── insert\_data.sql
-│   └── sample\_queries.sql
-├── advanced/
-│   ├── window\_functions.sql
-│   ├── views.sql
-│   └── stored\_procedures.sql
-├── images/
-│   └── erd\_sales\_project.png
-├── README.md
+This project goes beyond basic SQL and incorporates:
+
+- **Common Table Expressions (CTEs)** for improved query readability.
+- **Window Functions** like `RANK()` to identify top-N performance metrics.
+- **Views** to encapsulate and reuse complex logic.
+- **Stored Procedures** to automate report generation and maintenance tasks.
+- **Data validation and integrity checks** built into schema design.
+
+---
